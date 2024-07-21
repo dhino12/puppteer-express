@@ -1,9 +1,19 @@
-const pt = require("puppeteer");
 const axios = require("axios");
+const chromium = require('@sparticuz/chromium-min');
+const pt = require('puppeteer-core');
 
 async function getAuthorization(email, password) {
     // Launch browser in headless mode
-    const browser = await pt.launch();
+    const browser = await pt.launch({
+        args: [...chromium.args, '--hide-scrollbars', '--disable-web-security'],
+        defaultViewport: chromium.defaultViewport,
+        // you have to point to a Chromium tar file here 👇
+        executablePath: await chromium.executablePath(
+            `https://github.com/Sparticuz/chromium/releases/download/v116.0.0/chromium-v116.0.0-pack.tar`
+        ),
+        headless: chromium.headless,
+        ignoreHTTPSErrors: true,
+    });
     let base_headers;
     // Create a new page
     const page = await browser.newPage();

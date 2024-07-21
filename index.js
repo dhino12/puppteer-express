@@ -22,6 +22,13 @@ app.post("/", async (req, res) => {
     }
 });
 
+app.get("/", (req, res) => {
+    res.json({
+        error: false,
+        message: "Hello Welcome to PuppteerExpressJs - this repo only for extract auth token"
+    })
+})
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

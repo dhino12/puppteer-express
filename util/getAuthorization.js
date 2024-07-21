@@ -9,7 +9,7 @@ async function getAuthorization(email, password) {
         defaultViewport: chromium.defaultViewport,
         // you have to point to a Chromium tar file here 👇
         executablePath: await chromium.executablePath(
-            `https://github.com/Sparticuz/chromium/releases/download/v116.0.0/chromium-v116.0.0-pack.tar`
+            `https://github.com/Sparticuz/chromium/releases/download/v126.0.0/chromium-v126.0.0-pack.tar`
         ),
         headless: chromium.headless,
         ignoreHTTPSErrors: true,

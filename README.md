@@ -1,19 +1,18 @@
 # puppteer-expressjs
 [](https://github.com/dhino12/puppteer-express)
 
+## Problem Puppteer Vercel ⚠
+When using Vercel with a Hobby plan, your serverless API routes can only be processed for 5 seconds. This means that after 5 seconds, the route responds with a 504 GATEWAY TIMEOUT error.
+
+These same limits do not apply when running locally with next dev.
+
+To resolve this, you would need to reduce the amount of time your API route takes to respond, or upgrade your Vercel plan.
 
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
 Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Problem Puppteer Vercel ⚠
-When using Vercel with a Hobby plan, your serverless API routes can only be processed for 5 seconds. This means that after 5 seconds, the route responds with a [504 GATEWAY TIMEOUT error](https://stackoverflow.com/questions/68771480/nextjs-vercel-504-error-function-invocation-timeout).
-
-These same limits do not apply when running locally with next dev.
-
-To resolve this, you would need to reduce the amount of time your API route takes to respond, or upgrade your Vercel plan.
 
 ## Add your files
 

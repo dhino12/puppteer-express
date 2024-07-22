@@ -9,7 +9,7 @@ async function getCookie() {
         defaultViewport: chromium.defaultViewport,
         // you have to point to a Chromium tar file here 👇
         executablePath: await chromium.executablePath(
-            "https://github.com/Sparticuz/chromium/releases/download/v126.0.0/chromium-v126.0.0-pack.tar"
+            path.resolve(__dirname, '../chromium/chromium-v126.0.0-pack.tar')
         ),
         headless: chromium.headless,
         ignoreHTTPSErrors: true,
